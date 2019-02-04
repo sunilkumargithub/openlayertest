@@ -1,0 +1,36 @@
+<p>
+  geofence works!
+</p>
+
+<!-- <ng-template #Gadd let-modal>
+  <div class="gadd">
+    <input type="text">
+    </div>
+</ng-template> -->
+<button (click)="openmodel()">Add Geofence</button>
+<div *ngIf=modal>
+geofencename:<input type="text">
+<button (click)="openareamap()">Area</button>
+<div *ngIf=areamap >
+  Draw area map
+  <form class="form-inline">
+      <label>Geometry type &nbsp;</label>
+      <select id="type" (change)="changetype($event)">
+        <option value="Polygon">Polygon</option>
+        <option value="Circle">Circle</option>
+        <option value="None">None</option>
+      </select>
+    </form>
+<button (click)="getdrwasvalue()">Get drawn geofences</button><br>
+<button (click)="drawnewmap()">generate new map</button><br>
+
+
+  </div>
+<div class="map" id="map" style="height:40%;width: 60%;margin-left:10%"></div>
+
+<div *ngIf="newmap">
+<div class="map" id="newmap" style="height:40%;width: 60%;margin-left:10%"></div>
+
+</div>
+
+</div>
